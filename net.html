@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India - Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar_netflix">
+                <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="logo" class="netflix_logo">
+            </div>
+            <div class="navbar_nav_items">
+                <div class="nav_items">
+                    <div class="dropdown_container">
+                        <i class="fa fa-globe"></i>
+                        <select name="languages" id="languagesSelect" class="language_dropdown">
+                            <option value="english" selected>English</option>
+                            <option value="hindi">Hindi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="nav_item">
+                    <button class="signin_button">Sign In</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero_bg">
+                <img src="https://assets.nflxext.com/ffe/siteui/vlv3/00103100-5b45-4d4f-af32-342649f1bda5/64774cd8-5c3a-4823-a0bb-1610d6971bd4/IN-en-20230821-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="bg" class="hero_bg_img">
+            </div>
+            <div class="hero_bg_overlay"></div>
+            <div class="hero_card_container">
+                <h1 class="hero_title"><nobr>The biggest Indian hits. Ready to watch</nobr> <br>here from ₹ 149.</h1>
+                <br>
+                <h2 class="hero_subtitle">Join today. Cancel anytime.</h2>
+                <br>
+                <p class="hero_desc">Ready to watch? Enter your email to create or restart your membership.</p>
+                <br>
+                <input type="email" placeholder="Email address" class="email" id="emailAddr">
+               <a href="profile.html"> <button class="get_started" onclick="validateEmail()">Get Started ></button></a>
+               <script>
+                function fadeOutPage() {
+                    document.body.classList.add("page-fade-out");
+                    setTimeout(function() {
+                        window.location.href = "profile.html";
+                    }, 500); // Adjust the delay to match your transition time (0.5s in this example)
+                }
+            </script>
+            </div>
+            <hr>
+        </section>
+        <!-- Rest of your HTML content -->
+    </main>
+    <script>
+        function validateEmail() {
+            var emailInput = document.getElementById("emailAddr");
+            var email = emailInput.value;
+            var emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (emailPattern.test(email)) {
+                alert("Email is valid!");
+            } else {
+                alert("You have entered an invalid email address!");
+            }
+        }
+    </script>
+</body>
+</html>
